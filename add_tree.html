@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+
+<!-- lien avec le fichier css -->
+<link href="add_tree.css" rel="stylesheet">
+
+<!-- police d'écriture -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<!--JavaScript-->
+<script src="js/add_tree.js" defer></script>
+
+<!-- nom onglet-->
+	<head>
+		<title>
+			St-Quentin en vert
+		</title>
+	</head>
+<!-- en-tête-->
+	<header>
+		<h1> Projet A3 binôme 4 </h1>
+		<nav>
+			<ul>
+				<p>
+					<li> <a class="boutons" href="page_d_accueil.html", style="background-color:#8D4925;">Page d'accueil </a> </li>
+					<li> <a class="boutons" href="map_info.html", style="background-color:#8D4925;"> Carte&Info </a> </li>
+					<li> <a class="boutons" href="clusters.html", style="background-color:#8D4925;"> Clusters </a> </li>
+					<li> <a class="boutons" href="predictions.html", style="background-color:#8D4925;"> Prédictions </a> </li>
+				</p>
+			</ul>
+		</nav>
+	</header>
+	<body>
+		<h2 style="text-shadow: 1px 1px 2px black; font-size: 50px; text-align: center;">L'arbre :</h2>
+		<form id="add_arbre" method="post">
+			<div class="table-container">
+			<table>
+				<!-- 1ère ligne -->
+				<tr>
+					<td> 
+						Longitude
+						<br>
+						<label for="Longitude">
+							<input type="text" id="longitude" name="longitude" placeholder="Entrez la longitude de l'arbre">
+						</label>
+						<br>
+					</td>
+					<td> 
+						Latitude
+						<br>
+						<label for="Latitude">
+							<input type="text" id="latitude" name="latitude" placeholder="Entrez la latitude de l'arbre">
+						</label>
+						<br>
+					</td>
+					<td>
+						Etat de l'arbre
+						<br>
+						<select name="salon" id="etat_de_l_arbre">
+								<option class="info"> Sélectionnez l'état de l'arbre </option>
+						</select>
+						<br>
+					</td>
+				</tr>
+
+				<!-- 2e ligne -->
+				<tr>
+					<td>
+						Espèce
+						<br>
+						<input type="text" id="espece" name="espece" placeholder="Entrez le nom de l'espèce">
+						<br>
+					</td>
+					<td>
+						Remarquabilité de l'arbre
+						<br>
+						<select name="salon" id="remarquable"> 
+							<option class="info" value="oui" > OUI </option>
+							<option class="info" value="non"> NON </option>
+						</select>
+						<br>
+					</td>
+					<td>
+						Type de feuillage
+						<br>
+						<input type="text" id="feuillage" name="feuillage" placeholder="Entrez le feuillage">
+						<br>
+					</td>
+				</tr>
+
+				<!-- 3e ligne -->
+				<tr>
+					<td> 
+						Hauteur de l'arbre
+						<br>
+						<label for="Hauteur arbre">
+							<input type="text" class="h_tot" name="h_tot" id="h_tot" placeholder="Entrez la hauteur de l'arbre">
+						</label>
+						<br>
+					</td>
+					<td> 
+						Hauteur du tronc
+						<br>
+						<label for="Hauteur tronc">
+							<input type="text" class="h_tronc" name="h_tronc" id="h_tronc" placeholder="Entrez la hauteur du tronc">
+						</label>
+						<br>
+					</td>
+					<td> 
+						Diamètre du tronc
+						<br>
+						<label for="Diamètre tronc">
+							<input type="text" class="d_tronc" name="d_tronc" id="d_tronc" placeholder="Entrez le diamètre du tronc">
+						</label>
+						<br>
+					</td>
+				</tr>
+
+				<!-- 4e ligne -->
+				<tr>
+					<td>
+						Type de port
+						<br>
+						<select name="salon" id="port">
+								<option class="info" > Sélectionnez le type de port </option>
+						</select>
+						<br>
+					</td>
+					<td>
+						Type de pied
+						<br>
+						<select name="salon" id="pied">
+							<option class="info" > Sélectionnez le type de pied:</option>
+						</select>
+						<br>
+					</td>
+					<td>
+						Stade de développement de l'arbre
+						<br>
+						<select name="salon" id="stade_dev_arbre"> 
+							<option class="info" >Sélectionner le stade de dev de l'arbre:</option>
+						</select>
+						<br>
+					</td>
+				</tr>
+
+				<!-- 5e ligne - bouton envoyer -->
+				<tr>
+					<td></td>
+					<td class="boutons" style="align-content: center;"> <input type="submit" value="Envoyer" id="bouton_envoi"></td>
+					<td></td>
+					<br>
+				</tr>
+			</table>
+		</div>
+		</form>
+		<br>
+	</body>
+
+<!-- pied de page-->
+<footer>
+	<hr>
+	<div>
+	<h4>
+		<p><BLOCKQUOTE>Mathieu BINA</BLOCKQUOTE>
+			<BLOCKQUOTE>Flavie COUSIN</BLOCKQUOTE></p>
+	</h4>
+	<h1 style="font-style: bold; text-shadow: 1px 1px 2px black; color:black;">Ajout Arbre</h1>
+	</div>
+</footer>
+</html>
+
+
