@@ -299,7 +299,7 @@ data7$arbre_abattre<- as.integer(str_replace_all(data5$fk_arb_etat,c("ABATTU"="1
 
 #model<-glm(arbre_abattre~as.integer(age_estim)+as.integer(tronc_diam),data=data7,family=binomial)
 model<-glm(arbre_abattre~as.integer(tronc_diam),data=data7,family=binomial)
-X<-data.frame(as.integer(data7$tronc_diame))
+X<-data.frame(as.integer(data7$tronc_diam))
 plot(as.integer(data7$tronc_diam),data7$arbre_abattre)
 curve(predict(model,A= x,type="response"))
 
