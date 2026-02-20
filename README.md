@@ -62,13 +62,46 @@ mapboxAccessToken: "votre_cle_mapbox"
 
 # 🧩 Features
 ## 📍 1. Cartographie interactive (Mapbox & Plotly)
+Coeur visuel du projet, au lieu d'une simple liste, les arbres sont projetés sur une carte réelle de Saint Quentin.
+#### - Fonctionnement :
+Le script map_info.js récupère les coordonnées GPS (latitude/longitude) via une requête AJAX.
+#### - Interactivité :
+Au survol d'un point, une infobulle (tooltip) affiche la fiche d'identité de l'arbre : son espèce, sa hauteur totale, son diamètre et son stade de développement.
+#### - Techique :
+Utilisation de la bibliothèque Plotly combinée à un fond de carte Mapbox pour un rendu professionnel et fluide.
 
-## 📋 2.Visualisation dynamique des données (Tableau AJAX)
+## 📋 2. Visualisation dynamique des données (Tableau AJAX)
+Sous la carte, un tableau répertorie l'ensemble des données brutes de la base de données. 
+#### - Fonctionnement :
+Le tableau est généré dynamiquement. Cela signifie que si vous ajoutez un arbre dans la base de données, il apparaît instantanément dans le tableau sans avoir besoin de recharger toute la page.
+#### - Sélection :
+Chaque ligne possède un bouton Radio qui permet à l'utilisateur de sélectionner un arbre spécifique pour effectuer des analyses plus poussées (comme la prédiction d'âge).
 
-## ➕ 3.Système d'Ajout d'Arbre
+## ➕ 3. Système d'Ajout d'Arbre
+Le site web permet d'enrichir la base de données via une interface dédiée (add_tree.html).
+#### - Fonctionnement :
+Un formulaire complet permet de saisir toutes les caractéristiques : emplacement, mesures (tronc, hauteur), type de feuillage et état de santé.
+#### - Sécurité :
+Les données sont envoyées au script database.php qui utilise des requêtes préparées (PDO). Cela protège le site contre les injections SQL (une faille de sécurité majeure).
 
 ## 🤖 4. Prédiction de l'âge par IA (Script Python Machine Learning)
+C'est la fonctionnalité "intelligente" du projet. Elle permet d'estimer l'âge d'un arbre même si cette information n'est pas connue.
+#### - Le Modèle :
+Utilisation d'un algorithme de Machine Learning appelé SVM (Support Vector Machine)
+#### - Le Processus :
+a. L'utilisateur sélectionne un arbre dans le tableau.
+b. PHP récupère l'identifiant et appelle un script Python (age.py) via la commande shell_exec/
+c. Le script Python traite les dimensions de l'arbre (diamètre, hauteur) et renvoie une estimation de l'âge.
+d. Le résultat est renvoyé à l'interface via une alerte JavaScript
 
 ## 🫧 5. Analyse par clusters
+Cette fonctionnalité permet de mieux comprendre la répartition de la végétation en ville.
+#### - Objectif :
+Identifier des zones de forte densité d'arbres (bosquets, parcs) ou regrouper les arbres par similarités de caractéristiques.
+#### - Utilité :
+Pour une municipalité, cela permet de voir quelles zones sont bien boisées et lesquelles manquent de verdure.
 
 ## 🔌 6. Architecture API interne
+Le projet est construit de manière moderne avec une séparation entre les données et l'affichage.
+#### => JSON :
+Le fichier map_info.php agit comme une petite API. Il ne renvoie pas du texte brut, mais du format JSON. C'est le langage universel pour échanger des données entre un serveur et un navigateur web.
