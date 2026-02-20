@@ -1,7 +1,7 @@
 <?php
-define ('DB_USER', "etu0502");
-define ('DB_PASSWORD', "ibjrfobv");
-define ('DB_NAME', "etu0502");
+define ('DB_USER', "votre_utilisateur");
+define ('DB_PASSWORD', "votre_mdp");
+define ('DB_NAME', "votre_base");
 define ('DB_SERVER', "127.0.0.1");
 
 function dbConnect()
