@@ -1,0 +1,110 @@
+header{
+	height : 130px;
+	background-color:#7EEC74;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+}
+
+h1{
+	text-align: left;
+	font-family: "Inter", sans-serif;
+	font-size: 32px;
+	font-style: Medium;
+	color:#8D4925;
+}
+
+header ul{
+	list-style-type:none;
+	display:flex;
+}
+
+header nav .boutons{
+	font-family: "Inter", sans-serif;
+	color:white;
+	font-style:medium;
+	font-size:16px;
+	border-radius:8px;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left:28px;
+	padding-right:28px;
+	margin-left:27px;
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Inter';
+    padding: 0;
+    margin: 0;
+	background-color:white;
+	align-items: center;
+}
+
+body h2{
+	font-family: "Inter", sans-serif;
+	font-size:64px;
+	font-style:bold;
+}
+
+table{
+	border-style:none;
+	margin-left: 0 auto;
+}
+
+.table-container{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+table td{
+	font-family: "Inter", sans-serif;
+	width:300px;
+	height:50px;
+}
+
+table input{
+	width: 250px;
+	height:20px;
+}
+
+table select{
+	width:250px;
+	height:25px;
+}
+
+#bouton_envoi{
+	height:30px;
+	width:70px;
+	margin-left:85px;
+	font-family: "Inter", sans-serif;
+	text-align:center;
+	background-color:#8D4925;
+	border-radius:8px;
+	color:white;
+}
+
+footer{
+	font-family: "Inter", sans-serif;
+	background-color:white;
+}
+
+footer h2{
+	text-align: right;
+	font-size:45px;
+	font-style: bold;
+}
+
+footer hr{
+	height:5px;
+	background-color:black;
+}
+
+footer div{
+	display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: bold;
+}

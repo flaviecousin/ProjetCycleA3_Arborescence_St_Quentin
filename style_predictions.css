@@ -1,0 +1,80 @@
+header{
+	height : 130px;
+	background-color:#7EEC74;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+}
+
+header h1{
+	text-align: left;
+	font-family: "Inter", sans-serif;
+	font-size: 32px;
+	font-style: Medium;
+	color:#8D4925;
+}
+
+header ul{
+	list-style-type:none;
+	display:flex;
+}
+
+header nav .boutons{
+	font-family: "Inter", sans-serif;
+	color:white;
+	font-style:medium;
+	font-size:16px;
+	border-radius:8px;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left:28px;
+	padding-right:28px;
+	margin-left:27px;
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Inter';
+    padding: 0;
+    margin: 0;
+	background-color:white;
+	align-items: center;
+}
+
+body h2{
+	font-family: "Inter", sans-serif;
+	font-size:64px;
+	font-style:bold;
+	text-align: center;
+}
+
+body h2 #resultat{
+	font-family: "Inter", sans-serif;
+	font-size: 64px;
+	font-style: bold;
+	text-align:left;
+}
+
+footer{
+	font-family: "Inter", sans-serif;
+	background-color:white;
+}
+
+footer h2{
+	text-align: right;
+	font-size:45px;
+	font-style: bold;
+}
+
+footer hr{
+	height:5px;
+	background-color:black;
+}
+
+footer div{
+	display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: bold;
+}
